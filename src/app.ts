@@ -8,13 +8,13 @@ config()
 const app = express()
 
 //Settings
-app.set('port', process.env.PORT || 1523)
+app.set('port', process.env.PORT || 4000)
 
 //Middlewares
 app.use(helmet())
 app.use(morgan('dev'))
 
 //Routes
-app.use('/api', indexRoutes)
+app.use(indexRoutes)
 
 export default app;
